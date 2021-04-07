@@ -9,11 +9,11 @@ NGI Project pages:
 
 The app is built on top of [libsphinx](https://github.com/stef/libsphinx/) (see the [readme](https://github.com/stef/libsphinx/#what-is-this-thing) for a good explanation of the library).
 
-Briefly, the app allows you to communicate with a sphinx server (think "password server") to read & write credentials in a secure way.
+Briefly, the app allows you to communicate with a SPHINX server (think "password server") to read & write credentials in a secure way.
 The server never decrypts any passwords itself.
-All encreption/decription is happening on the client side.
+All encryption/decryption is happening on the client side.
 
-There is a reference Python sphinx client/server implementation called [pwdsphinx](https://github.com/stef/pwdsphinx) that is also packaged.
+There is a reference Python SPHINX client/server implementation called [pwdsphinx](https://github.com/stef/pwdsphinx) that is also packaged.
 This allows to easily test the functionality of the Anrdoid app in a local network.
 
 # Nix packages & their dependencies
@@ -47,10 +47,10 @@ You need:
 * [Nix](https://nixos.org/) (surprise!) with [Flakes](https://nixos.wiki/wiki/Flakes) support.
 
 The setup is as follows:
-A sphinx server ("oracle") will run on the dev machine.
-A sphinx command line client will run independently on the dev machine and connect to the oracle.
+A SPHINX server ("oracle") will run on the dev machine.
+A SPHINX command line client will run independently on the dev machine and connect to the oracle.
 The androsphinx app will also connect (via the local network) to the oracle.
-Both clients (cli & app) will be able to access the same credentials.
+Both clients (CLI & app) will be able to access the same credentials.
 
 ## Server setup
 
@@ -161,7 +161,7 @@ $ export IP_ADDR=X.X.X.X # 192.168....
 The phone is now configured correctly.
 Make sure the server process (``oracle``) is running.
 Use the app's search form to search for "site".
-You should see a log statement from the sphinx server as well as the entry "user" on the phone.
+You should see a log statement from the SPHINX server as well as the entry "user" on the phone.
 Try copying the password to the clipboard by using the master password from above.
 You should receive the same password as the CLI client.
 
